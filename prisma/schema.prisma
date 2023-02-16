@@ -7,6 +7,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
+//Standard schemas for next-auth
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -50,4 +52,12 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+//Custom Schemas
+
+model UserInvite {
+  id       String  @id @default(cuid())
+  email    String
+  accepted Boolean
 }
