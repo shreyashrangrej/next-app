@@ -1,5 +1,4 @@
 "use client";
-import styles from './page.module.css'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import { Box, Button, Checkbox, Container, Divider, FormControl, FormLabel, Heading, HStack, Input, Stack, Text } from '@chakra-ui/react'
 
